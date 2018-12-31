@@ -9,35 +9,15 @@
     <Grid>
         <TextBox Name="TextToCount" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" TextWrapping="Wrap" TextChanged="TextToCount_TextChanged"></TextBox>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" Margin="10,318,0,0" VerticalAlignment="Top" Width="376">
-            <Grid IsEnabled="False">
+            <Grid>
                 <Label Content="Minimum Words" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
                 <Label Content="Maximum Words" HorizontalAlignment="Left" Margin="189,10,0,0" VerticalAlignment="Top"/>
                 <Label Content="Minimum Chars." HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
                 <Label Content="Maximum Chars." HorizontalAlignment="Left" Margin="189,41,0,0" VerticalAlignment="Top"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="113,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="294,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="113,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <TextBox HorizontalAlignment="Left" Height="23" Margin="294,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <Label Content="Under Development" HorizontalAlignment="Left" Margin="84,60,0,0" VerticalAlignment="Top" Width="120">
-                    <Label.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-29.909"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Label.RenderTransform>
-                </Label>
-                <Label Content="Under Development" HorizontalAlignment="Left" Margin="266,60,-12,0" VerticalAlignment="Top" Width="120">
-                    <Label.RenderTransform>
-                        <TransformGroup>
-                            <ScaleTransform/>
-                            <SkewTransform/>
-                            <RotateTransform Angle="-29.909"/>
-                            <TranslateTransform/>
-                        </TransformGroup>
-                    </Label.RenderTransform>
-                </Label>
+                <TextBox Name="MinWords" HorizontalAlignment="Left" Height="23" Margin="113,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MaxWords" HorizontalAlignment="Left" Height="23" Margin="294,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MinChars" HorizontalAlignment="Left" Height="23" Margin="113,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MaxChars" HorizontalAlignment="Left" Height="23" Margin="294,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" Margin="406,318,0,0" VerticalAlignment="Top" Width="376">
