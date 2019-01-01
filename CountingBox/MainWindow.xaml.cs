@@ -28,47 +28,11 @@ namespace CountingBox
         private void TextToCount_TextChanged(object sender, TextChangedEventArgs e)
         {
             string text = TextToCount.Text;
-            int minChars = new int();
-            int maxChars = new int();
-            int minWords = new int();
-            int maxWords = new int();
+            int minChars = CountValue(MinChars.Text);
+            int maxChars = CountValue(MaxChars.Text);
+            int minWords = CountValue(MinWords.Text);
+            int maxWords = CountValue(MaxWords.Text);
             
-            if (MinChars.Text == "")
-            {
-                minChars = 0;
-            }
-            else
-            {
-                minChars = Convert.ToInt32(MinChars.Text);
-            }
-
-            if (MaxChars.Text == "")
-            {
-                maxChars = 0;
-            }
-            else
-            {
-                maxChars = Convert.ToInt32(MaxChars.Text);
-            }
-
-            if (MinWords.Text == "")
-            {
-                minWords = 0;
-            }
-            else
-            {
-                minWords = Convert.ToInt32(MinWords.Text);
-            }
-
-            if (MaxWords.Text == "")
-            {
-                maxWords = 0;
-            }
-            else
-            {
-                maxWords = Convert.ToInt32(MaxWords.Text);
-            }
-
             int charsTotal = Chars(text);
             CharsLimits(charsTotal, minChars, maxChars);
             CharCount.Content = charsTotal;
@@ -143,6 +107,29 @@ namespace CountingBox
             {
                 WordCount.Foreground = Brushes.Black;
             }
+        }
+
+        private int CountValue (string count)
+        {
+            int value = 0;
+
+            if (count == "")
+            {
+                value = 0;
+            }
+            else
+            {
+                try
+                {
+                    value = Convert.ToInt32(count);
+                }
+                catch
+                {
+                    value = 0;
+                }
+            }
+
+            return value;
         }
     }
 }
