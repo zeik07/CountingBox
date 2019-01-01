@@ -34,15 +34,15 @@ namespace CountingBox
             int maxWords = CountValue(MaxWords.Text);
             
             int charsTotal = Chars(text);
-            CharsLimits(charsTotal, minChars, maxChars);
-            CharCount.Content = charsTotal;
+            string charMod = CharsLimits(charsTotal, minChars, maxChars);
+            CharCount.Content = charMod + charsTotal;
 
             int spacesTotal = Spaces(text);
             SpaceCount.Content = spacesTotal;
 
             int wordsTotal = Words(text);
-            WordsLimits(wordsTotal, minWords, maxWords);
-            WordCount.Content = wordsTotal;
+            string wordMod = WordsLimits(wordsTotal, minWords, maxWords);
+            WordCount.Content = wordMod + wordsTotal;
         }
 
         private int Chars(string textString)
@@ -50,20 +50,24 @@ namespace CountingBox
             return textString.Length;
         }
 
-        private void CharsLimits(int total, int min, int max)
+        private string CharsLimits(int total, int min, int max)
         {
+            string modifier = "";
             if (max != 0 && total > max)
             {
+                modifier = "+";
                 CharCount.Foreground = Brushes.Red;
             }
             else if (min != 0 && total < min)
             {
+                modifier = "-";
                 CharCount.Foreground = Brushes.Red;
             }
             else
             {
                 CharCount.Foreground = Brushes.Black;
             }
+            return modifier;
         }
 
         private int Spaces(string textString)
@@ -93,20 +97,24 @@ namespace CountingBox
             return wordsTotal;
         }
 
-        private void WordsLimits(int total, int min, int max)
+        private string WordsLimits(int total, int min, int max)
         {
+            string modifier = "";
             if (max != 0 && total > max)
             {
+                modifier = "+";
                 WordCount.Foreground = Brushes.Red;
             }
             else if (min != 0 && total < min)
             {
+                modifier = "-";
                 WordCount.Foreground = Brushes.Red;
             }
             else
             {
                 WordCount.Foreground = Brushes.Black;
             }
+            return modifier;
         }
 
         private int CountValue (string count)
