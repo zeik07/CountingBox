@@ -121,21 +121,14 @@ namespace CountingBox
         {
             int value = 0;
 
-            if (count == "")
+            try
+            {
+                value = Convert.ToInt32(count);
+            }
+            catch
             {
                 value = 0;
-            }
-            else
-            {
-                try
-                {
-                    value = Convert.ToInt32(count);
-                }
-                catch
-                {
-                    value = 0;
-                }
-            }
+            }            
 
             return value;
         }
