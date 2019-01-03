@@ -14,10 +14,10 @@
                 <Label Content="Maximum Words" HorizontalAlignment="Left" Margin="189,10,0,0" VerticalAlignment="Top"/>
                 <Label Content="Minimum Chars." HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top"/>
                 <Label Content="Maximum Chars." HorizontalAlignment="Left" Margin="189,41,0,0" VerticalAlignment="Top"/>
-                <TextBox Name="MinWords" HorizontalAlignment="Left" Height="23" Margin="113,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <TextBox Name="MaxWords" HorizontalAlignment="Left" Height="23" Margin="294,13,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <TextBox Name="MinChars" HorizontalAlignment="Left" Height="23" Margin="113,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
-                <TextBox Name="MaxChars" HorizontalAlignment="Left" Height="23" Margin="294,44,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MinWords" HorizontalAlignment="Left" Height="23" Margin="113,13,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MaxWords" HorizontalAlignment="Left" Height="23" Margin="294,13,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MinChars" HorizontalAlignment="Left" Height="23" Margin="113,44,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
+                <TextBox Name="MaxChars" HorizontalAlignment="Left" Height="23" Margin="294,44,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
             </Grid>
         </Border>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" Margin="406,318,0,0" VerticalAlignment="Top" Width="376">

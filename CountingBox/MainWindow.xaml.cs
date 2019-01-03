@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace CountingBox
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -32,7 +29,9 @@ namespace CountingBox
             int maxChars = CountValue(MaxChars.Text);
             int minWords = CountValue(MinWords.Text);
             int maxWords = CountValue(MaxWords.Text);
-            
+
+            Tidy(minChars, maxChars, minWords, maxWords);
+
             int charsTotal = Chars(text);
             string charMod = CharsLimits(charsTotal, minChars, maxChars);
             CharCount.Content = charMod + charsTotal;
@@ -117,7 +116,7 @@ namespace CountingBox
             return modifier;
         }
 
-        private int CountValue (string count)
+        private int CountValue(string count)
         {
             int value = 0;
 
@@ -128,9 +127,29 @@ namespace CountingBox
             catch
             {
                 value = 0;
-            }            
+            }
 
             return value;
+        }
+
+        private void Tidy(int minChars, int maxChars, int minWords, int maxWords)
+        {
+            if (minChars == 0)
+            {
+                MinChars.Text = "0";
+            }
+            if (maxChars == 0)
+            {
+                MaxChars.Text = "0";
+            }
+            if (minWords == 0)
+            {
+                MinWords.Text = "0";
+            }
+            if (maxWords == 0)
+            {
+                MaxWords.Text = "0";
+            }
         }
     }
 }
