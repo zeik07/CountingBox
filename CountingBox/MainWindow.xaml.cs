@@ -85,7 +85,8 @@ namespace CountingBox
         private int Words(string textString)
         {
             int wordsTotal = 0;
-            string[] wordsSplit = textString.Split(' ');
+            char[] splits = new char[] { ' ', ',', '.', ':', ';', '!', '?', '\t', '|', '\\', '/', '_', '&', '@', '~', '#', '$', '%', '^', '*', '=', '+', '<', '>', '(', ')', '`' };
+            string[] wordsSplit = textString.Split(splits);
             foreach (string singleWord in wordsSplit)
             {
                 if (singleWord != "")
