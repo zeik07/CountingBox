@@ -5,9 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:CountingBox"
         mc:Ignorable="d"
-        Title="Counting Box" Height="450" Width="800">
+        Title="Counting Box" Height="450" Width="800" ResizeMode="CanMinimize">
     <Grid>
-        <TextBox Name="TextToCount" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" TextWrapping="Wrap" TextChanged="TextToCount_TextChanged"></TextBox>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="587*"/>
+            <ColumnDefinition Width="207*"/>
+        </Grid.ColumnDefinitions>
+        <TextBox Name="TextToCount" HorizontalAlignment="Left" Height="300" Margin="10,10,0,0" VerticalAlignment="Top" Width="772" TextWrapping="Wrap" TextChanged="TextToCount_TextChanged" Grid.ColumnSpan="2"></TextBox>
         <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" Margin="10,318,0,0" VerticalAlignment="Top" Width="376">
             <Grid>
                 <Label Content="Minimum Words" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top"/>
@@ -20,7 +24,7 @@
                 <TextBox Name="MaxChars" HorizontalAlignment="Left" Height="23" Margin="294,44,0,0" TextWrapping="Wrap" Text="0" VerticalAlignment="Top" Width="70" HorizontalContentAlignment="Right" VerticalContentAlignment="Center"/>
             </Grid>
         </Border>
-        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" Margin="406,318,0,0" VerticalAlignment="Top" Width="376">
+        <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="91" Margin="406,318,0,0" VerticalAlignment="Top" Width="376" Grid.ColumnSpan="2">
             <Grid>
                 <Label Content="Word Count" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
                 <Label Content="Char. Count" HorizontalAlignment="Left" Margin="145,10,0,0" VerticalAlignment="Top" Height="25" Width="80"/>
